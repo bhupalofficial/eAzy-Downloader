@@ -681,20 +681,20 @@ function App() {
                 <section className="space-y-4">
                   <h2 className="text-xl md:text-2xl font-extrabold text-gray-900 dark:text-white flex items-center gap-2">
                     <span className="w-1.5 h-6 bg-brand-500 rounded-full"></span>
-                    💡 How to Download Video & Audio
+                    {t.guide.howToTitle}
                   </h2>
                   <div className="grid sm:grid-cols-3 gap-4">
                     <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-2xl border border-gray-100 dark:border-gray-700/50">
-                      <div className="text-brand-500 dark:text-brand-400 font-extrabold text-lg mb-1">Step 1</div>
-                      <p className="text-sm text-gray-600 dark:text-gray-300">Copy the URL of your media from YouTube, TikTok, Facebook, or Instagram.</p>
+                      <div className="text-brand-500 dark:text-brand-400 font-extrabold text-lg mb-1">{t.guide.step1Title}</div>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">{t.guide.step1Desc}</p>
                     </div>
                     <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-2xl border border-gray-100 dark:border-gray-700/50">
-                      <div className="text-brand-500 dark:text-brand-400 font-extrabold text-lg mb-1">Step 2</div>
-                      <p className="text-sm text-gray-600 dark:text-gray-300">Paste the copied link in our search box above and hit the <strong>Get</strong> button.</p>
+                      <div className="text-brand-500 dark:text-brand-400 font-extrabold text-lg mb-1">{t.guide.step2Title}</div>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">{t.guide.step2Desc}</p>
                     </div>
                     <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-2xl border border-gray-100 dark:border-gray-700/50">
-                      <div className="text-brand-500 dark:text-brand-400 font-extrabold text-lg mb-1">Step 3</div>
-                      <p className="text-sm text-gray-600 dark:text-gray-300">Choose your preferred quality and format and begin your download seamlessly.</p>
+                      <div className="text-brand-500 dark:text-brand-400 font-extrabold text-lg mb-1">{t.guide.step3Title}</div>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">{t.guide.step3Desc}</p>
                     </div>
                   </div>
                 </section>
@@ -705,24 +705,24 @@ function App() {
                 <section className="space-y-4">
                   <h2 className="text-xl md:text-2xl font-extrabold text-gray-900 dark:text-white flex items-center gap-2">
                     <span className="w-1.5 h-6 bg-brand-500 rounded-full"></span>
-                    ⚡ Key Features of eAzy Downloader
+                    {t.guide.featuresTitle}
                   </h2>
                   <ul className="grid sm:grid-cols-2 gap-y-3 gap-x-6 list-none p-0 text-sm text-gray-600 dark:text-gray-300">
                     <li className="flex items-start gap-2">
                       <span className="text-emerald-500 mt-0.5">✔</span>
-                      <span><strong>High-Quality MP3</strong>: Convert any YouTube playlist or video directly into high-fidelity music with automatic album art embedding.</span>
+                      <span><strong>{t.guide.feature1Title}</strong>: {t.guide.feature1Desc}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-emerald-500 mt-0.5">✔</span>
-                      <span><strong>Universal Device Playback</strong>: Auto-re-encodes TikTok downloads into H.264/AAC standard format so they play perfectly on mobile, web, and Windows Media Player.</span>
+                      <span><strong>{t.guide.feature2Title}</strong>: {t.guide.feature2Desc}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-emerald-500 mt-0.5">✔</span>
-                      <span><strong>No Watermarks</strong>: Download clean, pristine social media videos instantly without watermarks or text overlays.</span>
+                      <span><strong>{t.guide.feature3Title}</strong>: {t.guide.feature3Desc}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-emerald-500 mt-0.5">✔</span>
-                      <span><strong>Free & Clean Site</strong>: Safe, private, and lightning fast. No registration required, combined with auto-wiping disk space.</span>
+                      <span><strong>{t.guide.feature4Title}</strong>: {t.guide.feature4Desc}</span>
                     </li>
                   </ul>
                 </section>
@@ -733,26 +733,26 @@ function App() {
                 <section className="space-y-4">
                   <h2 className="text-xl md:text-2xl font-extrabold text-gray-900 dark:text-white flex items-center gap-2">
                     <span className="w-1.5 h-6 bg-brand-500 rounded-full"></span>
-                    🙋 Frequently Asked Questions (FAQ)
+                    {t.guide.faqTitle}
                   </h2>
                   <div className="space-y-4 text-sm text-gray-600 dark:text-gray-300">
                     <div className="space-y-1">
-                      <h4 className="font-bold text-gray-900 dark:text-white text-base">Is there any limit or charge for downloads?</h4>
-                      <p>No, eAzy Downloader is 100% free and has no premium caps or daily search limits. No registration or software downloads are needed.</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white text-base">{t.guide.faq1Q}</h4>
+                      <p>{t.guide.faq1A}</p>
                     </div>
                     <div className="space-y-1">
-                      <h4 className="font-bold text-gray-900 dark:text-white text-base">Why do TikTok downloaded videos sometimes fail to play?</h4>
-                      <p>TikTok video files from other sources often package audio track streams or custom pixel groupings that are unreadable by standard media software like Apple QuickTime or Windows Media Player. eAzy Downloader solves this by auto-converting downloads into standard H.264 MP4 with AAC audio track, making it compatible with any offline player.</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white text-base">{t.guide.faq2Q}</h4>
+                      <p>{t.guide.faq2A}</p>
                     </div>
                     <div className="space-y-1">
-                      <h4 className="font-bold text-gray-900 dark:text-white text-base">Which audio options are available?</h4>
-                      <p>Audio downloads (MP3, M4A) are fully optimized for our YouTube downloader, while video platforms (TikTok, Instagram, Facebook) download pristine, highly compatible MP4 video tracks directly.</p>
+                      <h4 className="font-bold text-gray-900 dark:text-white text-base">{t.guide.faq3Q}</h4>
+                      <p>{t.guide.faq3A}</p>
                     </div>
                   </div>
                 </section>
 
                 <section className="bg-red-50/50 dark:bg-red-950/10 border border-red-100 dark:border-red-900/20 p-4 rounded-2xl text-xs text-gray-500 dark:text-gray-400">
-                  <strong>Disclaimer</strong>: Please respect copyright policies. eAzy Downloader does not host or store any copyright-restricted media on its servers and only indexes publicly accessible streams from social platforms.
+                  <strong>{t.guide.disclaimerTitle}</strong>: {t.guide.disclaimerDesc}
                 </section>
               </div>
             )}
