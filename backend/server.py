@@ -843,8 +843,27 @@ def process_download(url: str, format_id: str, ext: str, background_tasks: Backg
         media_type = 'audio/mpeg' if target_ext == 'mp3' else 'audio/mp4' if target_ext == 'm4a' else 'application/octet-stream'
 
         from urllib.parse import quote
-        dl_name = f"{info.get('title', 'video')}.{target_ext}"
-        dl_name = "".join([c for c in dl_name if c.isalnum() or c in [' ', '.', '-', '_']]).strip()
+        raw_title = info.get('title', 'video')
+        # Remove any file extension from the title if it exists to prevent double extensions (e.g., file.mp3.mp3)
+        for check_ext in ['.mp3', '.m4a', '.mp4', '.webm', '.mkv', '.3gp', '.avi']:
+            if raw_title.lower().endswith(check_ext):
+                raw_title = raw_title[:-len(check_ext)]
+                break
+        raw_title = raw_title.strip()
+
+        if platform == 'youtube':
+            artist = info.get('artist') or info.get('creator')
+            if artist:
+                # Format: Title -Artist -eAzy Downloader
+                title_with_suffix = f"{raw_title} -{artist} -eAzy Downloader"
+            else:
+                title_with_suffix = f"{raw_title} -eAzy Downloader"
+        else:
+            # Other modes like facebook, instagram, tiktok, etc.
+            title_with_suffix = f"{raw_title} -eAzy Downloader"
+
+        dl_name = f"{title_with_suffix}.{target_ext}"
+        dl_name = "".join([c for c in dl_name if c.isalnum() or c in [' ', '.', '-', '_', "'", '(', ')', '[', ']']]).strip()
         if not dl_name.endswith(f'.{target_ext}'):
             dl_name += f'.{target_ext}'
 
